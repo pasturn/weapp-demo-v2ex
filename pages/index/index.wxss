@@ -1,0 +1,72 @@
+/**index.wxss**/
+.list-item{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  width: 100%;
+  
+  margin-bottom: 20rpx;
+}
+.list-info{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 30rpx 0;
+  clear: both;
+  width: 100%
+}
+.list-member{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.list-c{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.list-avatar{
+  width: 64rpx; 
+  height: 64rpx; 
+  background-color: #eeeeee;
+  border-radius: 4px;
+  margin-right: 20rpx;
+}
+.list-top{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+}
+.list-node{
+  box-sizing: border-box;
+  display: block;
+  float: right;
+  padding: 8rpx;
+  border-radius: 6rpx;
+  background-color: #eeeeee; 
+  font-size:18rpx;
+  color: #aaaaaa;
+  font-weight: 100;
+}
+.list-username{
+  font-size: 26rpx;
+}
+
+.list-plus{
+   font-size: 26rpx;
+   color: #999999;
+}
+
+.list-title{
+  box-sizing: border-box;
+  font-size: 32rpx;
+  text-align: left;
+  line-height: 1.5;
+  padding-bottom: 30rpx;
+}
+

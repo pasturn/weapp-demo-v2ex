@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/content/content"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "V2EX",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#F7F7F7"
+  }
+}

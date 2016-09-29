@@ -1,0 +1,16 @@
+.content-wrap{
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    width: 100%;
+}
+.content-title{
+    font-size: 32rpx;
+    padding: 40rpx 0;
+    border-bottom: 1rpx solid #eeeeee;
+     line-height: 1.5;
+}
+.content-text{
+    font-size: 28rpx;
+    padding: 40rpx 0;
+    line-height: 2
+}

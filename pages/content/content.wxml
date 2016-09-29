@@ -1,0 +1,9 @@
+<!--content.wxml-->
+<view class="container">
+    <view class="content-wrap">
+        <view class="content-title">{{title}}</view>
+        <view class="content-text">
+            <p>{{content}}</p>
+        <view>
+    <view>
+</view>
