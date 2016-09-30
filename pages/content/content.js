@@ -1,14 +1,58 @@
 var app = getApp()
+var webapi = require('../../utils/web_api.js')
+var utils = require('../../utils/util.js')
 
 Page({
   data:{
-    title: 'V2EX',
-    content: ''
+    topic:{
+      title: 'V2EX',
+      content: ''
+    },
+    replies: []
   },
   onLoad:function(options){
-    this.setData({
-      title: options.title,
-      content: options.content
+    var that = this
+    console.log(webapi)
+    wx.request({
+      url: webapi.getTopic({id: options.topicid}),
+      header: {
+          'Content-Type': 'application/json'
+      },
+      success: function(res) {
+        var resData = res.data
+
+        that.setData({
+          topic: {
+            avatar: resData['0'].member.avatar_normal,
+            username: resData['0'].member.username,
+            last_modified: utils.kindTime(resData['0'].last_modified),
+            title: resData['0'].title,
+            content: resData['0'].content,
+            node_title: resData['0'].node.title
+          },
+        })
+       }
+    })
+
+    wx.request({
+      url: webapi.getReplies({topic_id: options.topicid}),
+      header: {
+          'Content-Type': 'application/json'
+      },
+      success: function(res) {
+        var resData = res.data
+        console.log(resData)
+        that.setData({
+          replies: resData.map(function(a){
+            return {
+              avatar: a.member.avatar_normal,
+              username: a.member.username,
+              last_modified: utils.kindTime(a.last_modified),
+              content: a.content
+            }
+          })
+        })
+      }
     })
   },
   onReady:function(){

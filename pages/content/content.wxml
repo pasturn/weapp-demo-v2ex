@@ -1,9 +1,43 @@
 <!--content.wxml-->
 <view class="container">
     <view class="content-wrap">
-        <view class="content-title">{{title}}</view>
+         <view class="content-info">
+            <view class="content-member">
+                <image class="content-avatar"  mode="scaleToFill" src="{{topic.avatar}}" />
+                <view>
+                    <view class="content-top">
+                        <text class="content-username">{{topic.username}}</text>
+                    </view>
+                    <view>
+                        <text class="content-plus">{{topic.last_modified}}</text>
+                    </view>
+                </view>
+            </view>
+            <view>  <text class="content-node">{{topic.node_title}}</text></view>
+        </view>
+      
+        <view class="content-title">{{topic.title}}</view>
         <view class="content-text">
-            <p>{{content}}</p>
-        <view>
-    <view>
+            <p>{{topic.content}}</p>
+        </view>
+    </view>
+        <block wx:for="{{replies}}" wx:for-item="reply">
+        <view class="reply-item" > 
+            <view class="reply-info">
+                <view class="reply-member">
+                <image class="reply-avatar"  mode="scaleToFill" src="{{reply.avatar}}" />
+                <view>
+                <view class="reply-top">
+                    <text class="reply-username">{{reply.username}}</text>
+                </view>
+                <view>
+                    <text class="reply-plus">{{index+1}}楼  {{reply.last_modified}}</text>
+                </view>
+                </view>
+                </view>
+            </view>
+            <view class="reply-content"><text >{{reply.content}}</text></view>
+        </view>
+    </block>
 </view>
+   

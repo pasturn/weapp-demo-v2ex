@@ -3,7 +3,7 @@
   box-sizing: border-box;
   padding: 0 30rpx;
   width: 100%;
-  
+  border-bottom: 1rpx solid #eeeeee; 
   margin-bottom: 20rpx;
 }
 .list-info{

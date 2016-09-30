@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 var app = getApp()
+var webapi = require('../../utils/web_api.js')
 var utils = require('../../utils/util.js')
 
 Page({
@@ -9,17 +10,16 @@ Page({
     hidden: false
   },
   onLoad: function () {
-    console.log('onLoad')
     var that = this
     //调用应用实例的方法获取全局数据
     wx.request({
-      url: 'https://www.v2ex.com/api/topics/latest.json',
+      url: webapi.getHotTopic(),
       header: {
           'Content-Type': 'application/json'
       },
       success: function(res) {
-        console.log(res.data)
         var resData = res.data
+
         that.setData({
           list: resData.map(function(a){
             return {
@@ -29,7 +29,7 @@ Page({
               last_modified: utils.kindTime(a.last_modified),
               replies: a.replies,
               title: a.title,
-              content: a.content
+              topicid: a.id
             }
           }),
           hidden: true
@@ -38,10 +38,9 @@ Page({
     })
   },
   bindViewTap: function(e) {
-    var title = e.currentTarget.dataset.title;
-    var content = e.currentTarget.dataset.content
+    var topicid = e.currentTarget.dataset.topicid;
     wx.navigateTo({
-      url: `../content/content?title=${title}&content=${content}`
+      url: `../content/content?topicid=${topicid}`
     })
   },
 })

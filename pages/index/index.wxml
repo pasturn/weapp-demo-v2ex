@@ -4,7 +4,7 @@
     加载中...
   </loading>
   <block wx:for="{{list}}" wx:for-item="article">
-    <view class="list-item" data-title="{{article.title}}" data-content="{{article.content}}" bindtap="bindViewTap"> 
+    <view class="list-item" data-title="{{article.title}}" data-content="{{article.content}}" data-topicid="{{article.topicid}}" bindtap="bindViewTap"> 
         <view class="list-info">
           <view class="list-member">
             <image class="list-avatar"  mode="scaleToFill" src="{{article.avatar_normal}}" />

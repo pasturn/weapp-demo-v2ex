@@ -2,15 +2,133 @@
     box-sizing: border-box;
     padding: 0 30rpx;
     width: 100%;
+    border-bottom: 1rpx solid #eeeeee; 
+}
+.content-info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 30rpx 0;
+    clear: both;
+    width: 100%
+}
+.content-member{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.content-c{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.content-avatar{
+    width: 64rpx; 
+    height: 64rpx; 
+    background-color: #eeeeee;
+    border-radius: 4px;
+    margin-right: 20rpx;
+}
+.content-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+}
+.content-username{
+    font-size: 26rpx;
+}
+
+.content-plus{
+    font-size: 26rpx;
+    color: #999999;
+}
+.content-node{
+  box-sizing: border-box;
+  display: block;
+  float: right;
+  padding: 8rpx;
+  border-radius: 6rpx;
+  background-color: #eeeeee; 
+  font-size:18rpx;
+  color: #aaaaaa;
+  font-weight: 100;
 }
 .content-title{
     font-size: 32rpx;
-    padding: 40rpx 0;
+    padding-bottom: 40rpx;
+    word-wrap: break-word;
     border-bottom: 1rpx solid #eeeeee;
      line-height: 1.5;
 }
 .content-text{
     font-size: 28rpx;
     padding: 40rpx 0;
+    word-wrap: break-word;
     line-height: 2
+}
+.reply-item{
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    width: 100%;
+    border-bottom: 1rpx solid #eeeeee; 
+    margin-bottom: 20rpx;
+}
+.reply-info{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 30rpx 0;
+    clear: both;
+    width: 100%
+}
+.reply-member{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.reply-c{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.reply-avatar{
+    width: 64rpx; 
+    height: 64rpx; 
+    background-color: #eeeeee;
+    border-radius: 4px;
+    margin-right: 20rpx;
+}
+.reply-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+}
+.reply-username{
+    font-size: 26rpx;
+}
+
+.reply-plus{
+    font-size: 26rpx;
+    color: #999999;
+}
+
+.reply-content{
+    box-sizing: border-box;
+    font-size: 26rpx;
+    text-align: left;
+    line-height: 1.5;
+    padding-bottom: 30rpx;
+    word-wrap: break-word;
 }
