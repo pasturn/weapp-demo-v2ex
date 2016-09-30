@@ -1,6 +1,8 @@
 # v2ex-wechat-weapp
 v2ex微信小程序
 
+![s1](https://github.com/pasturn/weapp-demo-v2ex/blob/master/image/s1.gif)
+![s2](https://github.com/pasturn/weapp-demo-v2ex/blob/master/image/s2.gif)
 
 ## 微信小程序相关
 [微信小程序开发文档][wxdoc]
