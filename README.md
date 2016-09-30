@@ -19,5 +19,7 @@ v2ex微信小程序
 在UI上参考了[Finb/V2ex-Swift][Finb/V2ex-Swift]
 [Finb/V2ex-Swift]:https://github.com/Finb/V2ex-Swift
 
-数据api参考了[samuel1112/v2er][v2er]里封装的方法，在此表示感谢
+数据api参考了[samuel1112/v2er][v2er]
 [v2er]:https://github.com/samuel1112/v2er
+
+对以上以上表示感谢
