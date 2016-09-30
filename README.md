@@ -1,6 +1,7 @@
 # v2ex-wechat-weapp
 v2ex微信小程序
 
+
 ## 微信小程序相关
 [微信小程序开发文档][wxdoc]
 
@@ -15,5 +16,8 @@ v2ex微信小程序
 [awesome-wechat-weapp]:https://github.com/justjavac/awesome-wechat-weapp
 
 ## 感谢
+在UI上参考了[Finb/V2ex-Swift][Finb/V2ex-Swift]
+[Finb/V2ex-Swift]:https://github.com/Finb/V2ex-Swift
+
 v2ex数据api参考了samuel1112的仓库[v2er][v2er]里封装的方法，在此表示感谢
 [v2er]:https://github.com/samuel1112/v2er
