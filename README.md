@@ -1,13 +1,6 @@
 # v2ex-wechat-weapp
 v2ex微信小程序
 
-## API
-
-最新主题
-
-相当于首页的“全部”这个 tab 下的最新内容。
-
-https://www.v2ex.com/api/topics/latest.json
-
-Method: GET
-Authentication: None
+## 微信小程序相关
+[微信小程序开发资源汇总][awesome-wechat-weapp][justjavac/awesome-wechat-weapp]
+[awesome-wechat-weapp]:https://github.com/justjavac/awesome-wechat-weapp
