@@ -3,7 +3,9 @@ v2ex微信小程序
 
 ### 微信小程序相关
 [微信小程序开发文档][wxdoc]
+
 [微信小程序设计指南][design]
+
 [微信小程序开发工具][devtool]
 
 [微信小程序开发资源汇总][awesome-wechat-weapp][justjavac/awesome-wechat-weapp]
