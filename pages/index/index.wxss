@@ -69,4 +69,18 @@
   line-height: 1.5;
   padding-bottom: 30rpx;
 }
+.tab-nav{
+  position: fixed;
+  bottom: 0;
+  height: 88rpx;
+  width: 100%;
+  background-color: #ffffff;
+  border-top:1rpx solid #eeeeee;
+}
+.tab-cell{
+  text-align: center;
+  color: #666666;
+  line-height: 2.8;
+  font-size: 32rpx;
+}
 

@@ -7,19 +7,23 @@ var utils = require('../../utils/util.js')
 Page({
   data: {
     list:[],
-    hidden: false
+    hidden: false,
+    errorCount: 0,
+    template: 'latest'
   },
   onLoad: function () {
+    this.getData('getLatestTopic')
+  },
+
+  getData: function (request, cb) {
     var that = this
-    //调用应用实例的方法获取全局数据
     wx.request({
-      url: webapi.getHotTopic(),
+      url: webapi[request](),
       header: {
           'Content-Type': 'application/json'
       },
       success: function(res) {
         var resData = res.data
-
         that.setData({
           list: resData.map(function(a){
             return {
@@ -32,11 +36,51 @@ Page({
               topicid: a.id
             }
           }),
-          hidden: true
+          hidden: true,
+          errorCount: 0
         })
+        if(cb && typeof cb === 'function'){
+          cb()
+        }
+      },
+      fail: function (err){
+        that.setData({
+          errorCount:that.data.errorCount + 1
+        })
+        if(that.data.errorCount < 4){
+          setTimeout(that.getData,2000)
+        }
       }
     })
   },
+
+  switchTab: function (e) {
+    var that = this
+    var currentTarget = e.currentTarget.id;
+    if( currentTarget === 'latest' && this.data.template !== 'latest'){
+      this.setData({
+        hidden:false
+      })
+      this.getData('getLatestTopic',function(){
+        that.setData({
+          hidden:true,
+          template:'latest'
+        })
+      })
+      
+    }else if(currentTarget === 'hot' && this.data.template !== 'hot'){
+      this.setData({
+        hidden:false
+      })
+      this.getData('getHotTopic',function(){
+        that.setData({
+          hidden:true,
+          template:'hot'
+        })
+      })
+    }
+  },
+
   bindViewTap: function(e) {
     var topicid = e.currentTarget.dataset.topicid;
     wx.navigateTo({
